@@ -32,6 +32,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "~> 3.8"
   s.add_development_dependency "rspec-collection_matchers", "~> 1.1"
   s.add_development_dependency "rubocop"
-  s.add_development_dependency "sqlite3", ">= 1.4.2"
+  s.add_development_dependency "sqlite3", ">= 1.6.0"
   s.metadata["rubygems_mfa_required"] = "true"
 end
