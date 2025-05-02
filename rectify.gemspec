@@ -19,19 +19,19 @@ Gem::Specification.new do |s|
   
   s.files         = Dir["LICENSE.txt", "readme.md", "lib/**/*"]
 
-  s.add_dependency "activemodel",   ">= 7.0.3"
-  s.add_dependency "activerecord",  ">= 7.0.3"
-  s.add_dependency "activesupport", ">= 7.0.3"
+  s.add_dependency "activemodel",   "~> 7.0", ">= 7.0.3"
+  s.add_dependency "activerecord",  "~> 7.0", ">= 7.0.3"
+  s.add_dependency "activesupport", "~> 7.0", ">= 7.0.3"
   s.add_dependency "virtus",        "~> 1.0.5"
-  s.add_dependency "wisper",        ">= 1.6.1"
+  s.add_dependency "wisper",        "~> 2.0"
 
-  s.add_development_dependency "actionpack",    ">= 7.0.3"
+  s.add_development_dependency "actionpack",    "~> 7.0", ">= 7.0.3"
   s.add_development_dependency "awesome_print", "~> 1.6"
   s.add_development_dependency "pry",           "~> 0.11.3"
-  s.add_development_dependency "rake"
-  s.add_development_dependency "rspec", "~> 3.8"
+  s.add_development_dependency "rake",          "~> 13.0"
+  s.add_development_dependency "rspec",         "~> 3.8"
   s.add_development_dependency "rspec-collection_matchers", "~> 1.1"
-  s.add_development_dependency "rubocop"
-  s.add_development_dependency "sqlite3", ">= 1.6.0"
+  s.add_development_dependency "rubocop",       "~> 1.33"
+  s.add_development_dependency "sqlite3",       "~> 1.6", ">= 1.6.0"
   s.metadata["rubygems_mfa_required"] = "true"
 end
