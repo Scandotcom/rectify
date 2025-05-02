@@ -11,26 +11,42 @@ several other gems and adds improved APIs to make things easier.
 Rectify is an extraction from a number of projects that use these techniques and
 proved to be successful.
 
-## Video
+## Scan.com fork
 
-In June 2016, I spoke at RubyC about Rectify and how it can be used to improve
-areas of your application. The full video and slides can be found here:
+This is a fork of the original Rectify gem maintained by Scan.com. The original gem hasn't been updated in several years, and we've merged changes from the ruby3 branch to support Ruby 3 and Rails 7. This fork includes all the necessary updates to make Rectify work with modern Ruby and Rails versions.
 
-[Building maintainable Rails apps - RubyC 2016](http://andypike.com/blog/conferences/rubyc-2016/)
+## Compatibility
+
+This gem has been tested and confirmed working with Ruby 3.0+ and Rails 7.0+.
 
 ## Installation
 
-To install, add it to your `Gemfile`:
+Add this line to your application's Gemfile:
 
 ```ruby
-gem "rectify"
+source "https://rubygems.pkg.github.com/scandotcom" do
+  gem "rectify"
+end
 ```
 
-Then use Bundler to install it:
+And run bundler.
 
-```
-bundle install
-```
+## Building and Publishing
+
+To build and publish this gem to the Scan.com GitHub Packages repository:
+
+1. Ensure you have the appropriate GitHub authentication configured in your `~/.gem/credentials` file
+
+2. Build the gem:
+   ```
+   gem build rectify.gemspec
+   ```
+
+3. Push the gem to GitHub Packages:
+   ```
+   gem push --key github --host https://rubygems.pkg.github.com/scandotcom rectify-x.x.x.gem
+   ```
+   (Replace x.x.x with the current version number)
 
 ## Overview
 

@@ -5,13 +5,19 @@ Gem::Specification.new do |s|
   s.version       = Rectify::VERSION
   s.summary       = "Improvements for building Rails apps"
   s.description   = "Build Rails apps in a more maintainable way"
-  s.authors       = ["Andy Pike"]
-  s.email         = "andy@andypike.com"
-  s.files         = Dir["LICENSE.txt", "readme.md", "lib/**/*"]
-  s.homepage      = "https://github.com/andypike/rectify"
+  s.authors       = ["Andy Pike", "Scan.com"]
+  s.email         = "engineering@scan.com"
+  s.metadata["github_repo"] = "https://github.com/Scandotcom/rectify"
+  s.homepage      = "https://github.com/Scandotcom/rectify"
   s.license       = "MIT"
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 3.0.0"
+  
+  # Configure the gem to use GitHub Packages
+  s.metadata["github_repo"] = "ssh://github.com/Scandotcom/rectify"
+  s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/scandotcom"
+  
+  s.files         = Dir["LICENSE.txt", "readme.md", "lib/**/*"]
 
   s.add_dependency "activemodel",   ">= 7.0.3"
   s.add_dependency "activerecord",  ">= 7.0.3"
